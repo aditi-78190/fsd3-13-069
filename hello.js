@@ -13,3 +13,4 @@ function sum(a,b){
 sayHello("Aditi Gupta");
 console.log(`sum of 2 and 5 is $ {sum (2,5)}`);
 sayHi("Adii");
+
