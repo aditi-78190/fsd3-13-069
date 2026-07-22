@@ -42,28 +42,40 @@
 
 // create another function that takes a no.a and show in words of with the help of twoWords function.
 
-function twoWords(num) {
-    switch (num) {
-        case 0: return "Zero";
-        case 1: return "One";
-        case 2: return "Two";
-        case 3: return "Three";
-        case 4: return "Four";
-        case 5: return "Five";
-        case 6: return "Six";
-        case 7: return "Seven";
-        case 8: return "Eight";
-        case 9: return "Nine";
-        default: return " ";
-    }
-}
+// function twoWords(num) {
+//     switch (num) {
+//         case 0: return "Zero";
+//         case 1: return "One";
+//         case 2: return "Two";
+//         case 3: return "Three";
+//         case 4: return "Four";
+//         case 5: return "Five";
+//         case 6: return "Six";
+//         case 7: return "Seven";
+//         case 8: return "Eight";
+//         case 9: return "Nine";
+//         default: return " ";
+//     }
+// }
 
-function showWords(a) {
-    let str = a.toString();
+// function showWords(a) {
+//     let str = a.toString();
 
-    for (let i = 0; i < str.length; i++) {
-        console.log(twoWords(Number(str[i])));
-    }
-}
+//     for (let i = 0; i < str.length; i++) {
+//         console.log(twoWords(Number(str[i])));
+//     }
+// }
 
- showWords(507);
+//  showWords(507);
+ 
+
+//  const rollNum = "23456789876";
+//  const digits = String(rollNum).split("");
+//  console.log(digits);
+
+ //for each loop syntax 
+let inWords ="";
+ digits.forEach((d)=> {
+    inWords +=" "+ toWords (Number(d));
+});
+ console.log(inWords);
