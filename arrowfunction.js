@@ -79,3 +79,9 @@ let inWords ="";
     inWords +=" "+ toWords (Number(d));
 });
  console.log(inWords);
+
+
+const toWords2 = (digit)=>{
+    const words = ["zero", "one", "two", "three",];
+    return words [digit];
+}
