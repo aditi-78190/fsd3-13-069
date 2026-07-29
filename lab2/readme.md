@@ -25,7 +25,7 @@ Major task for of OS Module
     - stat()
     - lstat()
     - fstat()
-    
+
 - Watching for changes
     - watch()
     - watchFile()
@@ -43,3 +43,5 @@ Major task for of OS Module
     - unlink()
     - link()
     - sylink()
+
+for await function use async.
