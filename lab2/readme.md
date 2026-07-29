@@ -18,8 +18,9 @@ Major task for of OS Module
 
 - directory Management
     - mkdir()
-    - rmdir()
+    - rmdir() --depricated
     - readdir()
+    - rm()
 
 - Metadata/Information
     - stat()
