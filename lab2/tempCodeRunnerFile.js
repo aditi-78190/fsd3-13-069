@@ -1,5 +1,5 @@
-import { appendFile } from "fs";
-import {readFile, writeFile, unlink} from "fs/promises";
+// import { appendFile } from "fs";
+import {readFile, writeFile, appendFile, unlink} from "fs/promises";
 
 const writeData = async (fname,contents) => {
     await writeFile(fname,contents);
@@ -16,8 +16,9 @@ const appendData = async (fname, contents)=> {
     await appendFile(fname, "\n" + contents);
 }
 
-const deleteFile = async (name) => {
-    await unlink(name);      // ✅ Sahi
+const deleteFile = async (fname)=>{
+    await fs.unlink(name);
+    console.log(`$ {fname} deleted`);
 };
 
 // await writeData("happy.txt", "I am very happy");
@@ -25,4 +26,3 @@ const deleteFile = async (name) => {
 // await appendData("happy.txt", "FSD is interesting");
 // await readData("happy.txt");
 await deleteFile("happy.txt")
-
