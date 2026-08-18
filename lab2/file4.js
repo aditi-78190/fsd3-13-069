@@ -9,3 +9,5 @@ await mkdir("images/profile/logos", {recursive: true });
 console.log("all folders created");
 
 await rm ("upload", {recursive: true});
+
+// CRUD Operations

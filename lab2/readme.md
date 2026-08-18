@@ -46,3 +46,17 @@ Major task for of OS Module
     - sylink()
 
 for await function use async.
+
+<!-- CRUD OPERATIONS -->
+each item id , name , price , quantity
+
+<!-- opERATIONS -->
+1. add to cart
+2. show cart
+3. remove items from cart
+4. update quantity from cart
+5. checkout
+
+NOTE: all items will be stored in hdd, so after termination of program we can retrieve cart details.
+
+<!--  -->
