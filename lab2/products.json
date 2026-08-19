@@ -1,0 +1,26 @@
+[
+  {
+    "id": 110,
+    "name": "HP-Laptop",
+    "price": 1200000,
+    "qty": 2
+  },
+  {
+    "id": 120,
+    "name": "Samsung S26 Utlta",
+    "price": 1560000,
+    "qty": 1
+  },
+  {
+    "id": 125,
+    "name": "Dell",
+    "price": 90000,
+    "qty": 3
+  },
+  {
+    "id": 130,
+    "name": "Victus",
+    "price": 149000,
+    "qty": 2
+  }
+]
