@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AquaSmart - Smart Water Bottle</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4fbff;
+            color: #123;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #0099cc;
+        }
+
+        .logo span {
+            color: #00c2a8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #123;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #0099cc;
+        }
+
+        .nav-btn {
+            background: #0099cc;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #e8f9ff, #e9fff9);
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #d7f6ff;
+            color: #0085b3;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #0099cc;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #52656d;
+            line-height: 1.7;
+            max-width: 550px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .primary-btn {
+            background: #0099cc;
+            color: white;
+            padding: 15px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .secondary-btn {
+            border: 2px solid #0099cc;
+            color: #0099cc;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* BOTTLE */
+        .hero-product {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bottle {
+            width: 220px;
+            height: 500px;
+            background: linear-gradient(145deg, #ffffff, #b9edff);
+            border-radius: 70px 70px 50px 50px;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0, 130, 180, 0.25);
+            border: 5px solid white;
+        }
+
+        .bottle-cap {
+            width: 100px;
+            height: 65px;
+            background: #0099cc;
+            position: absolute;
+            top: -55px;
+            left: 55px;
+            border-radius: 25px 25px 10px 10px;
+        }
+
+        .bottle-screen {
+            position: absolute;
+            top: 160px;
+            left: 35px;
+            width: 150px;
+            height: 100px;
+            background: #0d303b;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #6eeeff;
+        }
+
+        .bottle-screen strong {
+            font-size: 28px;
+        }
+
+        .bottle-screen small {
+            color: white;
+            margin-top: 5px;
+        }
+
+        .water-level {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 45%;
+            background: rgba(0, 160, 220, 0.22);
+            border-radius: 0 0 45px 45px;
+        }
+
+        /* FEATURES */
+        .features {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: #667;
+            margin-bottom: 50px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #68777c;
+            line-height: 1.5;
+        }
+
+        /* STATS */
+        .stats {
+            padding: 70px 8%;
+            background: #073b4c;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            gap: 20px;
+        }
+
+        .stat h2 {
+            font-size: 40px;
+            color: #64e8ff;
+        }
+
+        .stat p {
+            margin-top: 8px;
+            color: #d4edf2;
+        }
+
+        /* BENEFITS */
+        .benefits {
+            padding: 90px 8%;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .benefit-text {
+            width: 50%;
+        }
+
+        .benefit-text h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .benefit-text p {
+            color: #617178;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .benefit-list {
+            list-style: none;
+        }
+
+        .benefit-list li {
+            margin: 15px 0;
+            font-weight: 500;
+        }
+
+        .benefit-list li::before {
+            content: "✓";
+            color: #00a88f;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .benefit-box {
+            width: 50%;
+            background: linear-gradient(135deg, #00a6d6, #00b894);
+            min-height: 350px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .benefit-box h2 {
+            font-size: 45px;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 90px 8%;
+            text-align: center;
+            background: linear-gradient(135deg, #dff9ff, #e3fff7);
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #60727a;
+            margin-bottom: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #052d3a;
+            color: white;
+            padding: 30px 8%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer p {
+            color: #b9d2d8;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 70px;
+            }
+
+            .hero-text,
+            .hero-product {
+                width: 100%;
+            }
+
+            .hero p {
+                margin: auto auto 30px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefits {
+                flex-direction: column;
+            }
+
+            .benefit-text,
+            .benefit-box {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .feature-grid,
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .bottle {
+                transform: scale(0.8);
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Aqua<span>Smart</span></div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#buy" class="nav-btn">Buy Now</a>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <span class="tag">💧 SMART HYDRATION TECHNOLOGY</span>
+
+            <h1>
+                Drink Smarter.<br>
+                Live <span>Healthier.</span>
+            </h1>
+
+            <p>
+                Meet AquaSmart, the intelligent water bottle that
+                tracks your hydration, reminds you to drink water,
+                and keeps your water fresh throughout the day.
+            </p>
+
+            <div class="buttons">
+                <a href="#buy" class="primary-btn">Get AquaSmart →</a>
+                <a href="#features" class="secondary-btn">Explore Features</a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT -->
+        <div class="hero-product">
+
+            <div class="bottle">
+
+                <div class="bottle-cap"></div>
+
+                <div class="water-level"></div>
+
+                <div class="bottle-screen">
+                    <strong>72%</strong>
+                    <small>Hydration</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+
+        <h2 class="section-title">Everything You Need</h2>
+
+        <p class="section-subtitle">
+            Smart technology designed to make hydration effortless.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="icon">💧</div>
+                <h3>Hydration Tracking</h3>
+                <p>
+                    Automatically track how much water you drink
+                    throughout the day.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🔔</div>
+                <h3>Smart Reminders</h3>
+                <p>
+                    Get gentle reminders when it's time to drink
+                    more water.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🌡️</div>
+                <h3>Temperature Display</h3>
+                <p>
+                    Know your water temperature instantly with
+                    the smart LED display.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🔋</div>
+                <h3>Long Battery</h3>
+                <p>
+                    Enjoy up to 30 days of battery life on a single
+                    charge.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats">
+
+        <div class="stat">
+            <h2>750ml</h2>
+            <p>Capacity</p>
+        </div>
+
+        <div class="stat">
+            <h2>30 Days</h2>
+            <p>Battery Life</p>
+        </div>
+
+        <div class="stat">
+            <h2>24/7</h2>
+            <p>Hydration Tracking</p>
+        </div>
+
+        <div class="stat">
+            <h2>IPX7</h2>
+            <p>Water Resistant</p>
+        </div>
+
+    </section>
+
+
+    <!-- BENEFITS -->
+    <section class="benefits" id="benefits">
+
+        <div class="benefit-text">
+
+            <h2>
+                Your Personal<br>
+                Hydration Assistant
+            </h2>
+
+            <p>
+                AquaSmart combines modern design with intelligent
+                technology to help you build healthier hydration
+                habits every day.
+            </p>
+
+            <ul class="benefit-list">
+                <li>Real-time hydration monitoring</li>
+                <li>Smart drinking reminders</li>
+                <li>Temperature monitoring</li>
+                <li>Leak-proof design</li>
+                <li>BPA-free materials</li>
+            </ul>
+
+        </div>
+
+
+        <div class="benefit-box">
+
+            <div>
+                <div style="font-size:70px;">💧</div>
+
+                <h2>
+                    Stay<br>
+                    Hydrated.
+                </h2>
+
+                <p style="color:white;">
+                    One sip at a time.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta" id="buy">
+
+        <h2>Ready to Hydrate Smarter?</h2>
+
+        <p>
+            Make every sip count with AquaSmart.
+        </p>
+
+        <a href="#" class="primary-btn">
+            Buy Now — ₹2,999
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <div>
+            <strong>AquaSmart</strong>
+            <p>Smart hydration for a smarter life.</p>
+        </div>
+
+        <p>© 2026 AquaSmart. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>

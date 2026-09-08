@@ -84,3 +84,33 @@ to create npm project we can use
 - it also creates a folder node_modules automatically
 - node_modules holds the package/library files
 - generally we ignore the node_modules by .gitignore
+
+
+34) - start -> it will execute the app on development
+- dev -> it will start server in development phase (only for developer)
+
+- res : it will return contents (json/html/plain) to the user/client
+- req : it will retrieve the info from client to the server
+- server send also statusCodes to the client, that indicates the error/success msg
+
+## Status Codes
+- 200 -> 0k
+- 201 -> created
+- 400 -> bad req
+- 403 -> forbidden
+- 404 -> not found
+- 500 ->internal server error
+
+
+# Content Type
+
+- text/plain
+- text/html
+- application/json
+- text/css
+
+The content type and status code can be send back to client by two ways.
+
+1. res.writeHead
+2. res.setHeader
+3. res.statusCode
