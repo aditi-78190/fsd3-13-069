@@ -1,8 +1,8 @@
 {
-  "name": "lab3",
+  "name": "fsd",
   "version": "1.0.0",
-  "description": "",
-  "main": "prg1.js",
+  "description": "localhost - URL | 127.0.0.1 - IP address",
+  "main": "index.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon prg4.js"
