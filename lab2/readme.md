@@ -139,4 +139,13 @@ JSON stores only key-value pair enclosed by {}.
         review: 200,
     }
     ```
-    
+
+    <!-- header -->
+    Header is used to client that type of data send by the server. It may be HTML file , JSON file, plain text file, CSS file, any tokens (for login).
+
+1. text/pplain -> text file
+2. text/html -> html contentc/file
+3. application/json -> contents/file
+4. text/css -> stylesheet
+5. application/auth -> for tokens 
+   the headers can be set by  res object at server side by two ways

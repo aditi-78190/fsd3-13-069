@@ -1,0 +1,14 @@
+import http from "http";
+
+const server = http.createServer((req, res) => {
+  if (req.url === "/" && req.method === "GET") {
+    res.statusCode = 200;
+    res.end("Get Request");
+    
+  } else {
+    res.statusCode = 404;
+    res.end("request not found");
+  }
+});
+
+server.listen(5001, () => console.log("prg6 is running"));
