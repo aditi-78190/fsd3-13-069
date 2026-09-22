@@ -1,24 +1,25 @@
-const products = [
-    {   
-        id:1 , 
-        name: 'Marker', 
-        qty: 100, 
-        price: 15
+const products=[
+    {
+        id:1,
+        name:'marker',
+        qty:100,
+        price:15
     },
     {   
-        id:2 , 
-        name: 'Duster', 
-        qty: 50, 
-        price: 20
+        id:2,
+        name:'duster',
+        qty:200,
+        price:10
     },
 ]
 let nextId = 3;
-
-export const getAllProducts =() =>{         //arrow function
+export const getAllProducts = () =>{
     return products;
-
 }
 
-export const addProducts = () =>{
-    
-}
+export const addAllProducts = (item) =>{
+    item.id =  nextId;
+    nextId++;
+    products.push(item);
+    return item;
+};
