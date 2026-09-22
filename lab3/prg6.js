@@ -20,12 +20,10 @@ const server = http.createServer((req, res) => {
 
   } else if (req.url.startsWith("/products/") && req.method === "PUT") {
     const productID = req.url.split('/').pop();
-    console.log('Update Product id:', productID);
-
-
+    console.log('update product id:',productID);
     res.statusCode = 200;
     res.end("PUT Request");
-
+    
   } else if (req.url === "/" && req.method === "DELETE") {
     res.statusCode = 200;
     res.end("DELETE Request");
