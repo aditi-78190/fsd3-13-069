@@ -149,3 +149,13 @@ JSON stores only key-value pair enclosed by {}.
 4. text/css -> stylesheet
 5. application/auth -> for tokens 
    the headers can be set by  res object at server side by two ways
+
+<!-- LAB3(prg6.js) -->
+
+No paramater pass to the server when we receive all item
+<!-- post -->
+to add records we pass the value from body section to JSON format of api tester(echo api).
+<!-- delete -->
+to delete any product we pass parameter that is id of the product from url.
+<!-- update -->(put or patch)
+to update any product , we pass id from url and data to update from body to 
