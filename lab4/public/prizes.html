@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellence Tuition Classes - Scholarship & Excellence Prizes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans p-6">
+    <header class="max-w-5xl mx-auto flex justify-between items-center py-6 border-b border-slate-800">
+        <h1 class="text-2xl font-extrabold text-blue-400">EXCELLENCE TUITION CLASSES</h1>
+        <nav class="flex gap-4 text-xs font-semibold">
+            <a href="index.html" class="hover:text-blue-400">Courses</a>
+            <a href="register.html" class="hover:text-blue-400">Register</a>
+            <a href="login.html" class="hover:text-blue-400">Login</a>
+            <a href="feedback.html" class="hover:text-blue-400">Feedback</a>
+            <a href="prizes.html" class="hover:text-blue-400">Prizes</a>
+        </nav>
+    </header>
+    <main class="max-w-5xl mx-auto py-10">
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+                
+                <!-- Hero Header -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-xs font-bold text-purple-400 uppercase tracking-wider">
+                        <i class="fa-solid fa-trophy text-amber-400 mr-1"></i> Academic Excellence Program
+                    </span>
+                    <h1 class="text-3xl sm:text-5xl font-extrabold text-white mt-3">Scholarship &amp; Prize Rewards</h1>
+                    <p class="text-gray-400 text-sm mt-2">We believe in rewarding hard work! Top rankers in monthly tests and board exams win cash scholarships, tablets, trophies, and fee waivers.</p>
+                </div>
+
+                <!-- Interactive Scholarship Calculator Widget -->
+                <div class="glass-card p-8 rounded-3xl border border-purple-500/30 max-w-4xl mx-auto mb-16 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 text-purple-500/10 text-9xl font-black pointer-events-none">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+
+                    <h2 class="text-xl font-extrabold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-calculator text-amber-400"></i> Interactive Scholarship Eligibility Calculator
+                    </h2>
+                    <p class="text-xs text-gray-400 mb-6">Enter your last school examination percentage to calculate instant tuition fee waiver eligibility.</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
+                        <div class="sm:col-span-2 space-y-4">
+                            <div>
+                                <div class="flex justify-between text-xs font-bold text-gray-300 mb-2">
+                                    <span>School Marks Percentage:</span>
+                                    <span id="calc-pct-label" class="text-purple-400 text-base font-extrabold">85% Marks</span>
+                                </div>
+                                <input type="range" min="60" max="100" value="92" oninput="updateScholarshipCalc(this.value)" class="w-full h-2.5 bg-slate-900 rounded-lg appearance-none accent-purple-400 cursor-pointer">
+                                <div class="flex justify-between text-[10px] text-gray-500 mt-1 font-mono">
+                                    <span>60%</span>
+                                    <span>75%</span>
+                                    <span>90%</span>
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card-light p-6 rounded-2xl border border-purple-500/20 text-center">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Scholarship Waiver</p>
+                            <p id="calc-discount-badge" class="text-3xl font-extrabold text-gradient-amber mt-1">30% OFF</p>
+                            <p id="calc-reward-text" class="text-xs text-emerald-400 font-semibold mt-1">Silver Rank Scholarship</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Performer Prizes Grid -->
+                <div class="mb-16">
+                    <h2 class="text-2xl font-bold text-white mb-6 text-center">Excellence Awards Categories</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        
+                        <div class="glass-card p-6 rounded-3xl border border-amber-500/30 text-center space-y-4 hover:border-amber-400 transition-all">
+                            <div class="w-16 h-16 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-3xl mx-auto shadow-lg shadow-amber-500/10">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Board Rank Holders</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">Students scoring 95%+ in Class 10th or 12th Board examinations receive a brand new tablet device + 100% tuition refund.</p>
+                            <span class="inline-block px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 font-extrabold text-xs">
+                                Prize: Tablet + ₹25,000 Cash
+                            </span>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-3xl border border-purple-500/30 text-center space-y-4 hover:border-purple-400 transition-all">
+                            <div class="w-16 h-16 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-3xl mx-auto shadow-lg shadow-purple-500/10">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Monthly Quiz League</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">Top 3 rankers in our monthly online &amp; offline diagnostic tests win cash awards, official trophies, and certificates.</p>
+                            <span class="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 font-extrabold text-xs">
+                                Prize: ₹2,100 Monthly + Trophy
+                            </span>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-3xl border border-cyan-500/30 text-center space-y-4 hover:border-cyan-400 transition-all">
+                            <div class="w-16 h-16 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-3xl mx-auto shadow-lg shadow-cyan-500/10">
+                                <i class="fa-solid fa-users-viewfinder"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Peer Referral Reward</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">Refer your classmates or friends to Excellence Tuition Classes and both of you get an instant fee credit upon admission.</p>
+                            <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 font-extrabold text-xs">
+                                Reward: ₹1,000 Per Referral
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Monthly Leaderboard Showcase Table -->
+                <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-700/60 max-w-4xl mx-auto">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h2 class="text-xl font-bold text-white">Wall of Fame: Current Month Leaderboard</h2>
+                            <p class="text-xs text-gray-400">Based on recent diagnostic mock test performance</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-bold">
+                            Updated 2026
+                        </span>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs">
+                            <thead class="bg-slate-900/80 text-gray-400 uppercase text-[10px] tracking-wider border-b border-slate-800">
+                                <tr>
+                                    <th class="p-3">Rank</th>
+                                    <th class="p-3">Student Name</th>
+                                    <th class="p-3">Class / Stream</th>
+                                    <th class="p-3">Score</th>
+                                    <th class="p-3 text-right">Prize Awarded</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800/60 text-gray-300">
+                                <tr class="hover:bg-slate-900/40">
+                                    <td class="p-3 font-extrabold text-amber-400"><i class="fa-solid fa-trophy mr-1"></i> #1</td>
+                                    <td class="p-3 font-bold text-white">Aarav Patel</td>
+                                    <td class="p-3">Class 12th PCM</td>
+                                    <td class="p-3 font-mono text-emerald-400">295 / 300</td>
+                                    <td class="p-3 text-right font-bold text-amber-400">₹2,500 + Gold Trophy</td>
+                                </tr>
+                                <tr class="hover:bg-slate-900/40">
+                                    <td class="p-3 font-extrabold text-slate-300"><i class="fa-solid fa-medal mr-1 text-slate-300"></i> #2</td>
+                                    <td class="p-3 font-bold text-white">Sneha Roy</td>
+                                    <td class="p-3">Class 10th Board</td>
+                                    <td class="p-3 font-mono text-emerald-400">288 / 300</td>
+                                    <td class="p-3 text-right font-bold text-slate-300">₹1,500 + Silver Medal</td>
+                                </tr>
+                                <tr class="hover:bg-slate-900/40">
+                                    <td class="p-3 font-extrabold text-amber-600"><i class="fa-solid fa-award mr-1 text-amber-600"></i> #3</td>
+                                    <td class="p-3 font-bold text-white">Rohan Gupta</td>
+                                    <td class="p-3">Class 11th PCB</td>
+                                    <td class="p-3 font-mono text-emerald-400">282 / 300</td>
+                                    <td class="p-3 text-right font-bold text-amber-600">₹1,000 + Bronze Medal</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        
+</main>
+    <footer class="max-w-5xl mx-auto py-8 border-t border-slate-800 text-center text-xs text-gray-500">
+        &copy; 2026 Excellence Tuition Classes. All Rights Reserved.
+    </footer>
+</body>
+</html>

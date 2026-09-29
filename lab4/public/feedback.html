@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellence Tuition Classes - Student Feedback & Reviews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans p-6">
+    <header class="max-w-5xl mx-auto flex justify-between items-center py-6 border-b border-slate-800">
+        <h1 class="text-2xl font-extrabold text-blue-400">EXCELLENCE TUITION CLASSES</h1>
+        <nav class="flex gap-4 text-xs font-semibold">
+            <a href="index.html" class="hover:text-blue-400">Courses</a>
+            <a href="register.html" class="hover:text-blue-400">Register</a>
+            <a href="login.html" class="hover:text-blue-400">Login</a>
+            <a href="feedback.html" class="hover:text-blue-400">Feedback</a>
+            <a href="prizes.html" class="hover:text-blue-400">Prizes</a>
+        </nav>
+    </header>
+    <main class="max-w-5xl mx-auto py-10">
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+                
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-xs font-bold text-amber-400 uppercase tracking-wider">
+                        Community Reviews &amp; Testimonials
+                    </span>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Student &amp; Parent Feedback</h1>
+                    <p class="text-gray-400 text-sm mt-2">We take pride in our 98.4% student satisfaction rate. Share your experience with us.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Feedback Form Column -->
+                    <div class="lg:col-span-5 glass-card p-6 sm:p-8 rounded-3xl border border-slate-700/60 space-y-6">
+                        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-pen-to-square text-amber-400"></i> Write a Review
+                        </h2>
+
+                        <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-1">Your Full Name *</label>
+                                <input type="text" id="fb-name" required="" placeholder="e.g. Ananya Roy" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500">
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-1">Role *</label>
+                                    <select id="fb-role" required="" class="w-full px-3 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm">
+                                        <option value="Student">Student</option>
+                                        <option value="Parent">Parent</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-1">Grade / Batch *</label>
+                                    <input type="text" id="fb-batch" required="" placeholder="Class 10 PCM" class="w-full px-3 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm">
+                                </div>
+                            </div>
+
+                            <!-- Star Rating Input -->
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-1">Overall Rating *</label>
+                                <div class="flex items-center gap-2 text-2xl text-amber-400 cursor-pointer" id="star-rating-container">
+                                    <i class="fa-solid fa-star star-icon" onclick="setRating(1)"></i>
+                                    <i class="fa-solid fa-star star-icon" onclick="setRating(2)"></i>
+                                    <i class="fa-solid fa-star star-icon" onclick="setRating(3)"></i>
+                                    <i class="fa-solid fa-star star-icon" onclick="setRating(4)"></i>
+                                    <i class="fa-solid fa-star star-icon" onclick="setRating(5)"></i>
+                                </div>
+                            </div>
+
+                            <!-- Multi Category Ratings Slider -->
+                            <div class="space-y-3 pt-2">
+                                <div>
+                                    <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                        <span>Teaching Quality:</span>
+                                        <span id="label-teaching" class="text-amber-400 font-bold">5.0</span>
+                                    </div>
+                                    <input type="range" min="1" max="5" step="0.5" value="5" oninput="document.getElementById('label-teaching').textContent=this.value" class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none accent-amber-400 cursor-pointer">
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                        <span>Study Material &amp; Notes:</span>
+                                        <span id="label-notes" class="text-amber-400 font-bold">4.5</span>
+                                    </div>
+                                    <input type="range" min="1" max="5" step="0.5" value="4.5" oninput="document.getElementById('label-notes').textContent=this.value" class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none accent-amber-400 cursor-pointer">
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                        <span>Doubt Clearing Sessions:</span>
+                                        <span id="label-doubt" class="text-amber-400 font-bold">5.0</span>
+                                    </div>
+                                    <input type="range" min="1" max="5" step="0.5" value="5" oninput="document.getElementById('label-doubt').textContent=this.value" class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none accent-amber-400 cursor-pointer">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-1">Review Comments *</label>
+                                <textarea id="fb-comment" rows="3" required="" placeholder="Describe how Excellence Classes helped improve your concepts and school marks..." class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-500"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm shadow-lg shadow-amber-500/20 transition-all uppercase">
+                                Post Testimonial <i class="fa-solid fa-paper-plane ml-1"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Testimonials Display Grid -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="flex flex-wrap items-center justify-between gap-4">
+                            <h2 class="text-xl font-bold text-white">Recent Student &amp; Parent Reviews</h2>
+                            <div class="flex gap-2">
+                                <button onclick="filterReviews('all')" class="review-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-white">All</button>
+                                <button onclick="filterReviews('Student')" class="review-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-gray-400">Students</button>
+                                <button onclick="filterReviews('Parent')" class="review-filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-800 text-gray-400">Parents</button>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Reviews List -->
+                        <div id="reviews-container" class="space-y-4">
+                <div class="glass-card p-5 rounded-2xl border border-slate-700/60 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 font-extrabold flex items-center justify-center text-sm border border-blue-500/30">
+                                P
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Priya Sundaram</h4>
+                                <p class="text-[11px] text-gray-400">Student • Class 12th PCM</p>
+                            </div>
+                        </div>
+                        <div class="text-amber-400 text-xs">
+                            ★★★★★
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed">"Excellence Tuition Classes completely transformed my Physics concepts. Alok Sir explains complex numericals with incredible ease!"</p>
+                    <p class="text-[10px] text-gray-500 font-mono">2 days ago</p>
+                </div>
+            
+                <div class="glass-card p-5 rounded-2xl border border-slate-700/60 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 font-extrabold flex items-center justify-center text-sm border border-blue-500/30">
+                                S
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Sanjay Malhotra</h4>
+                                <p class="text-[11px] text-gray-400">Parent • Class 10th Board</p>
+                            </div>
+                        </div>
+                        <div class="text-amber-400 text-xs">
+                            ★★★★★
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed">"My son's marks jumped from 68% to 91% in the pre-board exams. The weekly performance reports sent to parents are extremely helpful."</p>
+                    <p class="text-[10px] text-gray-500 font-mono">1 week ago</p>
+                </div>
+            
+                <div class="glass-card p-5 rounded-2xl border border-slate-700/60 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 font-extrabold flex items-center justify-center text-sm border border-blue-500/30">
+                                D
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Devansh Mehta</h4>
+                                <p class="text-[11px] text-gray-400">Student • Class 11th NEET</p>
+                            </div>
+                        </div>
+                        <div class="text-amber-400 text-xs">
+                            ★★★★☆
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed">"The study material and DPPs are on par with national institutes. Regular doubt sessions helped me stay confident."</p>
+                    <p class="text-[10px] text-gray-500 font-mono">2 weeks ago</p>
+                </div>
+            </div>
+                    </div>
+
+                </div>
+
+            </div>
+        
+</main>
+    <footer class="max-w-5xl mx-auto py-8 border-t border-slate-800 text-center text-xs text-gray-500">
+        &copy; 2026 Excellence Tuition Classes. All Rights Reserved.
+    </footer>
+</body>
+</html>
