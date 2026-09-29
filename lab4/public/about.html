@@ -1,0 +1,1349 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AETHER - About Us | Pioneering Quantum Mobile Intelligence</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                purple: "#8B5CF6",
+                cyan: "#06B6D4",
+                pink: "#EC4899",
+                dark: "#0B0F17",
+                card: "#151C2C",
+                emerald: "#10B981",
+              },
+            },
+            animation: {
+              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+              glow: "glow 3s ease-in-out infinite alternate",
+              "spin-slow": "spin 20s linear infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-12px)" },
+              },
+              glow: {
+                "0%": {
+                  filter: "drop-shadow(0 0 15px rgba(139, 92, 246, 0.3))",
+                },
+                "100%": {
+                  filter: "drop-shadow(0 0 35px rgba(6, 182, 212, 0.6))",
+                },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #06090e;
+        color: #f3f4f6;
+        overflow-x: hidden;
+      }
+      .glass-panel {
+        background: rgba(21, 28, 44, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .glass-nav {
+        background: rgba(6, 9, 14, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .text-gradient-purple {
+        background: linear-gradient(135deg, #a78bfa 0%, #06b6d4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .text-gradient-emerald {
+        background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      /* Custom scrollbar for modern browsers */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #06090e;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1f293d;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #8b5cf6;
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans antialiased selection:bg-brand-purple selection:text-white flex flex-col min-h-screen"
+  >
+    <!-- Navigation Bar -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Brand Logo -->
+          <a href="#" class="flex items-center gap-3 group">
+            <div
+              class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-purple to-brand-cyan flex items-center justify-center shadow-lg shadow-brand-purple/20 transition-transform group-hover:scale-105"
+            >
+              <i class="fa-solid fa-atom text-white text-xl"></i>
+            </div>
+            <span class="text-2xl font-extrabold tracking-wider text-white"
+              >AETHER<span class="text-brand-cyan font-light">X1</span></span
+            >
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <div
+            class="hidden md:flex items-center space-x-8 text-sm font-medium"
+          >
+            <a
+              href="#hero"
+              class="text-gray-300 hover:text-brand-cyan transition-colors"
+              >Vision</a
+            >
+            <a
+              href="#timeline"
+              class="text-gray-300 hover:text-brand-cyan transition-colors"
+              >Evolution</a
+            >
+            <a
+              href="#values"
+              class="text-gray-300 hover:text-brand-cyan transition-colors"
+              >Innovations</a
+            >
+            <a
+              href="#impact"
+              class="text-gray-300 hover:text-brand-cyan transition-colors"
+              >Sustainability</a
+            >
+            <a
+              href="#team"
+              class="text-gray-300 hover:text-brand-cyan transition-colors"
+              >Leadership</a
+            >
+            <a
+              href="#careers"
+              class="text-gray-300 hover:text-brand-cyan transition-colors"
+              >Careers</a
+            >
+          </div>
+
+          <!-- Action Button -->
+          <div class="hidden md:flex items-center space-x-4">
+            <a
+              href="#careers"
+              class="px-5 py-2.5 rounded-full text-sm font-semibold bg-gradient-to-r from-brand-purple to-brand-cyan hover:opacity-90 transition-all transform hover:scale-105 shadow-lg shadow-brand-purple/25"
+            >
+              Join Our Team
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-300 hover:text-white focus:outline-none p-2"
+            >
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Nav Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden glass-panel border-t border-gray-800 px-4 pt-2 pb-6 space-y-3"
+      >
+        <a href="#hero" class="block py-2 text-gray-300 hover:text-white"
+          >Vision</a
+        >
+        <a href="#timeline" class="block py-2 text-gray-300 hover:text-white"
+          >Evolution</a
+        >
+        <a href="#values" class="block py-2 text-gray-300 hover:text-white"
+          >Innovations</a
+        >
+        <a href="#impact" class="block py-2 text-gray-300 hover:text-white"
+          >Sustainability</a
+        >
+        <a href="#team" class="block py-2 text-gray-300 hover:text-white"
+          >Leadership</a
+        >
+        <a href="#careers" class="block py-2 text-gray-300 hover:text-white"
+          >Careers</a
+        >
+        <a
+          href="#careers"
+          class="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-brand-purple to-brand-cyan font-semibold mt-4"
+          >Join Our Team</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="relative pt-36 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh]"
+    >
+      <!-- Glow Orbs -->
+      <div
+        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-purple/15 rounded-full blur-[150px] pointer-events-none"
+      ></div>
+      <div
+        class="absolute top-1/3 right-10 w-[450px] h-[450px] bg-brand-cyan/15 rounded-full blur-[130px] pointer-events-none"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center"
+      >
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-brand-purple/30 text-xs font-semibold uppercase tracking-wider text-brand-cyan mb-8 animate-float"
+        >
+          <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
+          The Story Behind AETHER
+        </div>
+
+        <h1
+          class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight max-w-5xl mx-auto"
+        >
+          Architecting the Boundary Between<br />
+          <span class="text-gradient-purple"
+            >Human Intent & Artificial Intelligence</span
+          >
+        </h1>
+
+        <p
+          class="mt-6 text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto font-normal leading-relaxed"
+        >
+          Founded in Silicon Valley, AETHER is a premier deep-tech lab and
+          hardware house dedicated to reinventing the flagship smartphone
+          experience through quantum-inspired engineering and zero-carbon
+          craftsmanship.
+        </p>
+
+        <!-- Interactive Quick Stats Grid -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mt-16"
+        >
+          <div
+            class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-brand-purple/50 transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-10 h-10 rounded-lg bg-brand-purple/20 text-brand-purple flex items-center justify-center mx-auto mb-3 text-xl group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-white">5M+</p>
+            <p
+              class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold"
+            >
+              Active Enthusiasts
+            </p>
+          </div>
+
+          <div
+            class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-brand-cyan/50 transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-10 h-10 rounded-lg bg-brand-cyan/20 text-brand-cyan flex items-center justify-center mx-auto mb-3 text-xl group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-white">120+</p>
+            <p
+              class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold"
+            >
+              Patented Innovations
+            </p>
+          </div>
+
+          <div
+            class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-3 text-xl group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-emerald-400">
+              100%
+            </p>
+            <p
+              class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold"
+            >
+              Net-Zero Goal 2028
+            </p>
+          </div>
+
+          <div
+            class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-brand-pink/50 transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-10 h-10 rounded-lg bg-brand-pink/20 text-brand-pink flex items-center justify-center mx-auto mb-3 text-xl group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <p class="text-3xl sm:text-4xl font-extrabold text-white">42</p>
+            <p
+              class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold"
+            >
+              Global R&D Hubs
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Evolution / Story Timeline Section -->
+    <section
+      id="timeline"
+      class="py-24 relative bg-slate-950/60 border-y border-gray-900"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-xs font-bold uppercase tracking-widest text-brand-cyan mb-2"
+          >
+            Our Genesis
+          </h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">
+            The Journey to Aether X1
+          </p>
+          <p class="text-gray-400 mt-3">
+            Click on any milestone to view detailed achievements and
+            architectural breakthroughs.
+          </p>
+        </div>
+
+        <!-- Milestone Tabs Nav -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+          <button
+            onclick="selectMilestone(2022)"
+            id="year-btn-2022"
+            class="year-tab-btn px-6 py-3 rounded-full text-sm font-bold glass-panel text-gray-400 hover:text-white transition-all"
+          >
+            2022: Inception
+          </button>
+          <button
+            onclick="selectMilestone(2023)"
+            id="year-btn-2023"
+            class="year-tab-btn px-6 py-3 rounded-full text-sm font-bold glass-panel text-gray-400 hover:text-white transition-all"
+          >
+            2023: Neural Lab
+          </button>
+          <button
+            onclick="selectMilestone(2024)"
+            id="year-btn-2024"
+            class="year-tab-btn px-6 py-3 rounded-full text-sm font-bold glass-panel text-gray-400 hover:text-white transition-all"
+          >
+            2024: Titanium Chassis
+          </button>
+          <button
+            onclick="selectMilestone(2025)"
+            id="year-btn-2025"
+            class="year-tab-btn px-6 py-3 rounded-full text-sm font-bold glass-panel text-gray-400 hover:text-white transition-all"
+          >
+            2025: Aether OS 1.0
+          </button>
+          <button
+            onclick="selectMilestone(2026)"
+            id="year-btn-2026"
+            class="year-tab-btn px-6 py-3 rounded-full text-sm font-bold bg-brand-purple text-white shadow-lg transition-all"
+          >
+            2026: Aether X1 Reveal
+          </button>
+        </div>
+
+        <!-- Dynamic Timeline Card Container -->
+        <div
+          id="timeline-card-container"
+          class="glass-panel p-8 md:p-12 rounded-3xl border border-gray-800 relative overflow-hidden transition-all duration-300 min-h-[300px]"
+        >
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values & Innovations Section -->
+    <section id="values" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-xs font-bold uppercase tracking-widest text-brand-purple mb-2"
+          >
+            Pillars of Excellence
+          </h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">
+            Innovation Guided by Principles
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Pillar 1 -->
+          <div
+            class="glass-panel p-8 rounded-3xl border border-gray-800 hover:border-brand-purple/50 transition-all hover:-translate-y-2 group flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand-purple/20 text-brand-purple flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform"
+              >
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Neural Computing
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Integrating deep hardware-level neural accelerators to process
+                user intent before interaction happens.
+              </p>
+            </div>
+            <div
+              class="pt-6 mt-6 border-t border-gray-800/80 flex items-center text-xs font-semibold text-brand-cyan"
+            >
+              <span>3nm Custom Silicon</span>
+              <i
+                class="fa-solid fa-arrow-right ml-auto group-hover:translate-x-1 transition-transform"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div
+            class="glass-panel p-8 rounded-3xl border border-gray-800 hover:border-brand-cyan/50 transition-all hover:-translate-y-2 group flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand-cyan/20 text-brand-cyan flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform"
+              >
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Zero-Trust Privacy
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Your data never leaves your device. All generative AI modules
+                run entirely locally on-chip.
+              </p>
+            </div>
+            <div
+              class="pt-6 mt-6 border-t border-gray-800/80 flex items-center text-xs font-semibold text-brand-cyan"
+            >
+              <span>Encrypted Enclave</span>
+              <i
+                class="fa-solid fa-arrow-right ml-auto group-hover:translate-x-1 transition-transform"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div
+            class="glass-panel p-8 rounded-3xl border border-gray-800 hover:border-emerald-500/50 transition-all hover:-translate-y-2 group flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform"
+              >
+                <i class="fa-solid fa-recycle"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Circular Craftsmanship
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Constructed from 100% recycled titanium alloys and
+                bio-degradable organic display glass.
+              </p>
+            </div>
+            <div
+              class="pt-6 mt-6 border-t border-gray-800/80 flex items-center text-xs font-semibold text-emerald-400"
+            >
+              <span>Closed-Loop Materials</span>
+              <i
+                class="fa-solid fa-arrow-right ml-auto group-hover:translate-x-1 transition-transform"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div
+            class="glass-panel p-8 rounded-3xl border border-gray-800 hover:border-brand-pink/50 transition-all hover:-translate-y-2 group flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand-pink/20 text-brand-pink flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform"
+              >
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Ergonomic Precision
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Weight distribution engineered to the millimeter for natural
+                tactile balance and single-hand mastery.
+              </p>
+            </div>
+            <div
+              class="pt-6 mt-6 border-t border-gray-800/80 flex items-center text-xs font-semibold text-brand-pink"
+            >
+              <span>Acoustic Micro-Fibers</span>
+              <i
+                class="fa-solid fa-arrow-right ml-auto group-hover:translate-x-1 transition-transform"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Global Impact & Sustainability Section -->
+    <section
+      id="impact"
+      class="py-24 bg-slate-950/80 border-y border-gray-900 relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Details -->
+          <div class="lg:col-span-6 space-y-6">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-xs font-bold text-emerald-400 uppercase tracking-widest"
+            >
+              <i class="fa-solid fa-seedling"></i> Eco-Metrics Calculator
+            </div>
+            <h2
+              class="text-3xl sm:text-5xl font-extrabold text-white leading-tight"
+            >
+              Elegance Without<br /><span class="text-gradient-emerald"
+                >Environmental Compromise</span
+              >
+            </h2>
+            <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+              Drag the slider to preview our projected ecological savings based
+              on global Aether X1 smartphone production cycles.
+            </p>
+
+            <!-- Interactive Slider Widget Controls -->
+            <div
+              class="glass-panel p-6 rounded-2xl border border-gray-800 space-y-6"
+            >
+              <div>
+                <div class="flex justify-between items-center text-sm mb-2">
+                  <span class="text-gray-300 font-semibold"
+                    >Production Volume Target:</span
+                  >
+                  <span
+                    id="slider-units-label"
+                    class="text-emerald-400 font-bold text-base"
+                    >2.5 Million Units</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="impact-slider"
+                  min="0.5"
+                  max="10"
+                  step="0.5"
+                  value="2.5"
+                  oninput="updateImpactMetrics(this.value)"
+                  class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400"
+                />
+                <div
+                  class="flex justify-between text-[10px] text-gray-500 mt-1 font-mono"
+                >
+                  <span>500K Units</span>
+                  <span>5M Units</span>
+                  <span>10M Units</span>
+                </div>
+              </div>
+
+              <!-- Computed Impact Stats Grid -->
+              <div
+                class="grid grid-cols-3 gap-4 pt-4 border-t border-gray-800 text-center"
+              >
+                <div>
+                  <p id="stat-co2" class="text-xl font-extrabold text-white">
+                    42,500
+                  </p>
+                  <p class="text-[11px] text-gray-400 mt-0.5">Tons CO₂ Saved</p>
+                </div>
+                <div class="border-x border-gray-800">
+                  <p
+                    id="stat-plastic"
+                    class="text-xl font-extrabold text-emerald-400"
+                  >
+                    100%
+                  </p>
+                  <p class="text-[11px] text-gray-400 mt-0.5">
+                    Zero Single-Use Plastic
+                  </p>
+                </div>
+                <div>
+                  <p id="stat-trees" class="text-xl font-extrabold text-white">
+                    1.8M
+                  </p>
+                  <p class="text-[11px] text-gray-400 mt-0.5">Trees Planted</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Visual Display -->
+          <div class="lg:col-span-6 flex justify-center">
+            <div
+              class="glass-panel p-8 rounded-3xl border border-emerald-500/20 max-w-md w-full relative group"
+            >
+              <div
+                class="absolute -top-6 -right-6 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl"
+              ></div>
+              <div class="flex items-center gap-4 mb-6">
+                <div
+                  class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-2xl"
+                >
+                  <i class="fa-solid fa-earth-americas"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-white">
+                    Planet-First Hardware
+                  </h3>
+                  <p class="text-xs text-gray-400">
+                    Audited by Global Eco Standards
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-4 text-xs text-gray-300">
+                <div
+                  class="p-3 bg-slate-900/60 rounded-xl flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check text-emerald-400 text-base"></i>
+                  <span>100% Recycled Aerospace Titanium Frame</span>
+                </div>
+                <div
+                  class="p-3 bg-slate-900/60 rounded-xl flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check text-emerald-400 text-base"></i>
+                  <span>100% Solar-Powered Assembly Plants</span>
+                </div>
+                <div
+                  class="p-3 bg-slate-900/60 rounded-xl flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-check text-emerald-400 text-base"></i>
+                  <span>Non-Toxic Soy Ink Soy-Fiber Packaging</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet the Leadership Team Section -->
+    <section id="team" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-xs font-bold uppercase tracking-widest text-brand-cyan mb-2"
+          >
+            Minds Behind AETHER
+          </h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">
+            Executive Leadership
+          </p>
+          <p class="text-gray-400 mt-2">
+            Filter by department or click on a leader to read their full story.
+          </p>
+
+          <!-- Filter Controls -->
+          <div class="flex flex-wrap justify-center gap-2 mt-8">
+            <button
+              onclick="filterTeam('all')"
+              class="team-filter-btn px-5 py-2 rounded-full text-xs font-bold bg-brand-cyan text-slate-950 transition-all"
+            >
+              All
+            </button>
+            <button
+              onclick="filterTeam('exec')"
+              class="team-filter-btn px-5 py-2 rounded-full text-xs font-bold glass-panel text-gray-400 hover:text-white transition-all"
+            >
+              Executive
+            </button>
+            <button
+              onclick="filterTeam('eng')"
+              class="team-filter-btn px-5 py-2 rounded-full text-xs font-bold glass-panel text-gray-400 hover:text-white transition-all"
+            >
+              Engineering
+            </button>
+            <button
+              onclick="filterTeam('design')"
+              class="team-filter-btn px-5 py-2 rounded-full text-xs font-bold glass-panel text-gray-400 hover:text-white transition-all"
+            >
+              Design
+            </button>
+          </div>
+        </div>
+
+        <!-- Team Grid Container -->
+        <div
+          id="team-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          <!-- Dynamically rendered team members -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Our Journey / Careers Section -->
+    <section
+      id="careers"
+      class="py-24 bg-slate-950/60 border-t border-gray-900 relative"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-xs font-bold uppercase tracking-widest text-brand-purple mb-2"
+          >
+            Help Shape The Future
+          </h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">
+            Open Positions
+          </p>
+          <p class="text-gray-400 mt-2">
+            We are always searching for visionary thinkers, hardware sculptors,
+            and software pioneers.
+          </p>
+        </div>
+
+        <!-- Career Categories Tabs -->
+        <div class="flex justify-center gap-3 mb-10">
+          <button
+            onclick="filterJobs('all')"
+            id="job-tab-all"
+            class="job-tab-btn px-6 py-2.5 rounded-xl text-xs font-bold bg-brand-purple text-white transition-all"
+          >
+            All Roles
+          </button>
+          <button
+            onclick="filterJobs('eng')"
+            id="job-tab-eng"
+            class="job-tab-btn px-6 py-2.5 rounded-xl text-xs font-bold glass-panel text-gray-400 hover:text-white transition-all"
+          >
+            Engineering
+          </button>
+          <button
+            onclick="filterJobs('design')"
+            id="job-tab-design"
+            class="job-tab-btn px-6 py-2.5 rounded-xl text-xs font-bold glass-panel text-gray-400 hover:text-white transition-all"
+          >
+            Design
+          </button>
+          <button
+            onclick="filterJobs('ai')"
+            id="job-tab-ai"
+            class="job-tab-btn px-6 py-2.5 rounded-xl text-xs font-bold glass-panel text-gray-400 hover:text-white transition-all"
+          >
+            AI Research
+          </button>
+        </div>
+
+        <!-- Jobs List Container -->
+        <div id="jobs-container" class="max-w-4xl mx-auto space-y-4">
+          <!-- Populated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Footer -->
+    <footer
+      class="bg-black border-t border-gray-900 py-16 text-gray-500 text-sm mt-auto"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+          <div class="col-span-2">
+            <div
+              class="flex items-center gap-2 text-white font-bold text-xl mb-4"
+            >
+              <i class="fa-solid fa-atom text-brand-purple"></i> AETHER
+            </div>
+            <p class="text-xs text-gray-400 max-w-sm leading-relaxed mb-6">
+              Pioneering the next century of mobile computing with intelligent
+              neural hardware and circular sustainability.
+            </p>
+            <div class="flex space-x-4 text-base text-gray-400">
+              <a href="#" class="hover:text-brand-cyan transition-colors"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="#" class="hover:text-brand-purple transition-colors"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="hover:text-brand-cyan transition-colors"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a href="#" class="hover:text-white transition-colors"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h4
+              class="text-white font-semibold mb-4 text-xs uppercase tracking-wider"
+            >
+              Navigation
+            </h4>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a href="#hero" class="hover:text-white transition-colors"
+                  >Our Vision</a
+                >
+              </li>
+              <li>
+                <a href="#timeline" class="hover:text-white transition-colors"
+                  >Milestones</a
+                >
+              </li>
+              <li>
+                <a href="#values" class="hover:text-white transition-colors"
+                  >Innovations</a
+                >
+              </li>
+              <li>
+                <a href="#team" class="hover:text-white transition-colors"
+                  >Leadership</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-white font-semibold mb-4 text-xs uppercase tracking-wider"
+            >
+              Products
+            </h4>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Aether X1 Flagship</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Neural OS 4.0</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Aether Quantum Pods</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Titanium Care+</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-white font-semibold mb-4 text-xs uppercase tracking-wider"
+            >
+              Careers
+            </h4>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a href="#careers" class="hover:text-white transition-colors"
+                  >Open Roles</a
+                >
+              </li>
+              <li>
+                <a href="#careers" class="hover:text-white transition-colors"
+                  >Life at Aether</a
+                >
+              </li>
+              <li>
+                <a href="#impact" class="hover:text-white transition-colors"
+                  >Sustainability</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-900 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs"
+        >
+          <p>&copy; 2026 AETHER Technologies Inc. All rights reserved.</p>
+          <div class="flex space-x-6 mt-4 sm:mt-0">
+            <a href="#" class="hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-white transition-colors"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-white transition-colors"
+              >Security Disclosure</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Team Member Modal Popup -->
+    <div
+      id="team-modal"
+      class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+    >
+      <div
+        id="team-modal-card"
+        class="glass-panel max-w-xl w-full p-8 rounded-3xl border border-brand-cyan/40 relative animate-fade-in space-y-6"
+      >
+        <!-- Modal Header -->
+        <button
+          onclick="closeTeamModal()"
+          class="absolute top-6 right-6 text-gray-400 hover:text-white text-xl"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div id="team-modal-content">
+          <!-- Content injected via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Job Application Modal Popup -->
+    <div
+      id="job-modal"
+      class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+    >
+      <div
+        class="glass-panel max-w-lg w-full p-8 rounded-3xl border border-brand-purple/40 relative space-y-6"
+      >
+        <button
+          onclick="closeJobModal()"
+          class="absolute top-6 right-6 text-gray-400 hover:text-white text-xl"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h3 id="modal-job-title" class="text-2xl font-extrabold text-white">
+          Apply for Position
+        </h3>
+        <p class="text-xs text-gray-400">
+          Join our engineering hub in Cupertino or remote.
+        </p>
+
+        <form onsubmit="submitJobApplication(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-1"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              required
+              placeholder="Jane Doe"
+              class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-gray-700 text-white text-sm focus:outline-none focus:border-brand-purple"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-1"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              required
+              placeholder="jane@example.com"
+              class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-gray-700 text-white text-sm focus:outline-none focus:border-brand-purple"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-1"
+              >Portfolio / LinkedIn URL</label
+            >
+            <input
+              type="url"
+              required
+              placeholder="https://linkedin.com/in/..."
+              class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-gray-700 text-white text-sm focus:outline-none focus:border-brand-purple"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-1"
+              >Brief Statement</label
+            >
+            <textarea
+              rows="3"
+              placeholder="Why do you want to build the future with Aether?"
+              class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-gray-700 text-white text-sm focus:outline-none focus:border-brand-purple"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-purple to-brand-cyan font-bold text-white shadow-lg hover:opacity-90 transition-all text-sm"
+          >
+            Submit Application
+          </button>
+        </form>
+        <div
+          id="job-modal-msg"
+          class="hidden p-3 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 text-xs text-center"
+        >
+          <i class="fa-solid fa-circle-check mr-1"></i> Application sent! Our
+          recruiting team will reach out shortly.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Milestone Data
+      const milestoneData = {
+        2022: {
+          title: "Founded in Silicon Valley",
+          subtitle: "The Stealth Era",
+          description:
+            "AETHER was formed by a team of ex-quantum optics engineers and mobile hardware veterans with a shared thesis: mobile phones had plateaued, and a fundamental reset in material science and hardware AI was required.",
+          highlights: [
+            "$15M Seed Funding Secured",
+            "Core Patent Filed for Quantum Neural Enclave",
+            "Assembled initial 12-person team",
+          ],
+        },
+        2023: {
+          title: "Neural Lab Breakthrough",
+          subtitle: "Creating custom 3nm Silicon",
+          description:
+            "In partnership with premier foundries, AETHER designed the first prototype of the Neural-X processor, capable of running local 10B parameter LLMs directly on mobile battery power without overheating.",
+          highlights: [
+            "3nm Tape-out Completed",
+            "Sub-watt Generative AI Acceleration",
+            "First Lab Prototype Booted",
+          ],
+        },
+        2024: {
+          title: "Aerospace Titanium Chassis",
+          subtitle: "Redefining Mobile Durability",
+          description:
+            "Engineered micro-arc titanium frames that reduced structural phone weight by 22% while providing double the rigidity of standard aluminum flagships.",
+          highlights: [
+            "PVD Coating Invention",
+            "Zero-Flex Unibody Architecture",
+            "100% Recycled Metal Supply Chain Established",
+          ],
+        },
+        2025: {
+          title: "Aether OS 1.0 Alpha",
+          subtitle: "Software-Hardware Co-Design",
+          description:
+            "Developed Aether OS from the kernel up, eliminating lag and replacing traditional rigid app icons with dynamic neural widgets that predict user workflow.",
+          highlights: [
+            "Predictive UI Kernel Launch",
+            "End-to-End On-Device Encryption",
+            "Developer SDK Beta Released",
+          ],
+        },
+        2026: {
+          title: "Global Reveal of Aether X1",
+          subtitle: "The Quantum Flagship Arrives",
+          description:
+            "Unveiling the flagship Aether X1 smartphone to critical acclaim worldwide. Delivering 200MP camera optics, 160W HyperCharge, and pure quantum intelligence to millions.",
+          highlights: [
+            "Official Commercial Unveiling",
+            "500,000 Pre-Orders in First 24 Hours",
+            "Named Design Innovation of the Year",
+          ],
+        },
+      };
+
+      // Leadership Data
+      const teamData = [
+        {
+          id: 1,
+          name: "Dr. Elena Vance",
+          role: "Chief Executive Officer & Founder",
+          category: "exec",
+          img: "https://placehold.co/400x400/151C2C/8B5CF6?text=EV",
+          bio: "Former Principal Quantum Physicist at Stanford. Elena holds 34 patents in optical computing and led AETHER from seed startup to global flagship manufacturer.",
+          socials: { linkedin: "#", twitter: "#" },
+        },
+        {
+          id: 2,
+          name: "Marcus Thorne",
+          role: "Chief Design Officer",
+          category: "design",
+          img: "https://placehold.co/400x400/151C2C/06B6D4?text=MT",
+          bio: "Award-winning industrial designer behind iconic minimalist consumer electronics. Marcus shapes the tactile elegance and ergonomic balance of every Aether product.",
+          socials: { linkedin: "#", github: "#" },
+        },
+        {
+          id: 3,
+          name: "Dr. Aris Thorne",
+          role: "VP of Silicon Engineering",
+          category: "eng",
+          img: "https://placehold.co/400x400/151C2C/EC4899?text=AT",
+          bio: "20+ years experience pioneering micro-chip architectures. Aris led the architectural design of the groundbreaking 3nm Neural-X processor.",
+          socials: { linkedin: "#" },
+        },
+        {
+          id: 4,
+          name: "Sarah Lin",
+          role: "Chief Sustainability Officer",
+          category: "exec",
+          img: "https://placehold.co/400x400/151C2C/10B981?text=SL",
+          bio: "Environmental scientist dedicated to zero-waste electronics manufacturing. Sarah spearheaded AETHER's 100% recycled titanium supply loop.",
+          socials: { twitter: "#", linkedin: "#" },
+        },
+      ];
+
+      // Open Roles Data
+      const jobData = [
+        {
+          title: "Senior Quantum Optics Engineer",
+          dept: "eng",
+          location: "Cupertino, CA / Hybrid",
+          type: "Full-Time",
+        },
+        {
+          title: "Principal AI/ML Kernel Developer",
+          dept: "ai",
+          location: "Remote",
+          type: "Full-Time",
+        },
+        {
+          title: "Lead Industrial Hardware Sculptor",
+          dept: "design",
+          location: "Cupertino, CA",
+          type: "Full-Time",
+        },
+        {
+          title: "Embedded Firmware Engineer (Aether OS)",
+          dept: "eng",
+          location: "Zurich, Switzerland",
+          type: "Full-Time",
+        },
+      ];
+
+      // Render Evolution Timeline Item
+      function selectMilestone(year) {
+        const data = milestoneData[year];
+        if (!data) return;
+
+        // Highlight Tab Buttons
+        document.querySelectorAll(".year-tab-btn").forEach((btn) => {
+          btn.classList.remove("bg-brand-purple", "text-white", "shadow-lg");
+          btn.classList.add("glass-panel", "text-gray-400");
+        });
+        const activeBtn = document.getElementById(`year-btn-${year}`);
+        if (activeBtn) {
+          activeBtn.classList.add("bg-brand-purple", "text-white", "shadow-lg");
+          activeBtn.classList.remove("glass-panel", "text-gray-400");
+        }
+
+        // Populate Container
+        const container = document.getElementById("timeline-card-container");
+        container.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-4 border-b md:border-b-0 md:border-r border-gray-800 pb-6 md:pb-0 md:pr-8">
+                        <span class="text-5xl font-extrabold text-gradient-purple">${year}</span>
+                        <h3 class="text-2xl font-bold text-white mt-2">${data.title}</h3>
+                        <p class="text-xs font-semibold uppercase tracking-widest text-brand-cyan mt-1">${data.subtitle}</p>
+                    </div>
+                    <div class="md:col-span-8 space-y-4">
+                        <p class="text-gray-300 text-sm md:text-base leading-relaxed">${data.description}</p>
+                        <div class="pt-2">
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Key Accomplishments</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                ${data.highlights
+                                  .map(
+                                    (h) => `
+                                    <div class="flex items-center gap-2 text-xs text-gray-300">
+                                        <i class="fa-solid fa-sparkles text-brand-cyan"></i> ${h}
+                                    </div>
+                                `,
+                                  )
+                                  .join("")}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+      }
+
+      // Sustainability Interactive Calculator Logic
+      function updateImpactMetrics(val) {
+        const units = parseFloat(val);
+        document.getElementById("slider-units-label").textContent =
+          `${units} Million Units`;
+
+        // Calculate values
+        const co2Saved = Math.round(units * 17000).toLocaleString();
+        const treesPlanted = (units * 0.72).toFixed(1);
+
+        document.getElementById("stat-co2").textContent = co2Saved;
+        document.getElementById("stat-trees").textContent = `${treesPlanted}M`;
+      }
+
+      // Render Team Grid with Filters
+      function filterTeam(category) {
+        // Update Filter Buttons
+        document.querySelectorAll(".team-filter-btn").forEach((btn) => {
+          btn.classList.remove("bg-brand-cyan", "text-slate-950");
+          btn.classList.add("glass-panel", "text-gray-400");
+        });
+        event.target.classList.add("bg-brand-cyan", "text-slate-950");
+        event.target.classList.remove("glass-panel", "text-gray-400");
+
+        const filtered =
+          category === "all"
+            ? teamData
+            : teamData.filter((m) => m.category === category);
+        const grid = document.getElementById("team-grid");
+
+        grid.innerHTML = filtered
+          .map(
+            (m) => `
+                <div onclick="openTeamModal(${m.id})" class="glass-panel p-6 rounded-3xl border border-gray-800 hover:border-brand-purple/60 transition-all hover:-translate-y-2 cursor-pointer group text-center">
+                    <div class="relative w-32 h-32 mx-auto mb-4 rounded-2xl overflow-hidden border-2 border-brand-purple/30 group-hover:border-brand-cyan transition-colors">
+                        <img src="${m.img}" alt="${m.name}" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-white group-hover:text-brand-cyan transition-colors">${m.name}</h3>
+                    <p class="text-xs text-gray-400 mt-1">${m.role}</p>
+                    <div class="mt-4 inline-flex items-center gap-1 text-[11px] font-semibold text-brand-purple group-hover:underline">
+                        View Profile <i class="fa-solid fa-arrow-right text-[9px]"></i>
+                    </div>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      // Open Leadership Modal
+      function openTeamModal(id) {
+        const m = teamData.find((item) => item.id === id);
+        if (!m) return;
+
+        const modalContent = document.getElementById("team-modal-content");
+        modalContent.innerHTML = `
+                <div class="flex flex-col sm:flex-row items-center gap-6">
+                    <img src="${m.img}" alt="${m.name}" class="w-28 h-28 rounded-2xl border-2 border-brand-cyan object-cover">
+                    <div class="text-center sm:text-left">
+                        <h3 class="text-2xl font-extrabold text-white">${m.name}</h3>
+                        <p class="text-xs font-semibold text-brand-cyan uppercase tracking-wider mt-0.5">${m.role}</p>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed mt-4">${m.bio}</p>
+                <div class="flex gap-4 pt-4 border-t border-gray-800">
+                    ${m.socials.linkedin ? `<a href="${m.socials.linkedin}" class="text-gray-400 hover:text-brand-cyan text-lg"><i class="fa-brands fa-linkedin"></i></a>` : ""}
+                    ${m.socials.twitter ? `<a href="${m.socials.twitter}" class="text-gray-400 hover:text-brand-purple text-lg"><i class="fa-brands fa-x-twitter"></i></a>` : ""}
+                    ${m.socials.github ? `<a href="${m.socials.github}" class="text-gray-400 hover:text-white text-lg"><i class="fa-brands fa-github"></i></a>` : ""}
+                </div>
+            `;
+
+        document.getElementById("team-modal").classList.remove("hidden");
+      }
+
+      function closeTeamModal() {
+        document.getElementById("team-modal").classList.add("hidden");
+      }
+
+      // Render & Filter Careers List
+      function filterJobs(dept) {
+        document.querySelectorAll(".job-tab-btn").forEach((btn) => {
+          btn.classList.remove("bg-brand-purple", "text-white");
+          btn.classList.add("glass-panel", "text-gray-400");
+        });
+        const activeTab = document.getElementById(`job-tab-${dept}`);
+        if (activeTab) {
+          activeTab.classList.add("bg-brand-purple", "text-white");
+          activeTab.classList.remove("glass-panel", "text-gray-400");
+        }
+
+        const filtered =
+          dept === "all" ? jobData : jobData.filter((j) => j.dept === dept);
+        const container = document.getElementById("jobs-container");
+
+        container.innerHTML = filtered
+          .map(
+            (j) => `
+                <div class="glass-panel p-6 rounded-2xl border border-gray-800 hover:border-brand-cyan/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h4 class="text-lg font-bold text-white">${j.title}</h4>
+                        <div class="flex flex-wrap items-center gap-3 mt-1 text-xs text-gray-400">
+                            <span><i class="fa-solid fa-location-dot mr-1 text-brand-purple"></i> ${j.location}</span>
+                            <span><i class="fa-solid fa-briefcase mr-1 text-brand-cyan"></i> ${j.type}</span>
+                        </div>
+                    </div>
+                    <button onclick="openJobModal('${j.title}')" class="px-5 py-2.5 rounded-xl font-bold bg-white/10 hover:bg-brand-cyan hover:text-slate-950 text-white transition-all text-xs whitespace-nowrap">
+                        Apply Now
+                    </button>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      // Open Job Application Modal
+      function openJobModal(jobTitle) {
+        document.getElementById("modal-job-title").textContent =
+          `Apply: ${jobTitle}`;
+        document.getElementById("job-modal-msg").classList.add("hidden");
+        document.getElementById("job-modal").classList.remove("hidden");
+      }
+
+      function closeJobModal() {
+        document.getElementById("job-modal").classList.add("hidden");
+      }
+
+      function submitJobApplication(e) {
+        e.preventDefault();
+        const msg = document.getElementById("job-modal-msg");
+        msg.classList.remove("hidden");
+        setTimeout(() => {
+          closeJobModal();
+        }, 3000);
+      }
+
+      // Mobile Nav Toggle
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", () => {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      // Initialize Defaults
+      window.addEventListener("DOMContentLoaded", () => {
+        selectMilestone(2026);
+        filterTeam("all");
+        filterJobs("all");
+        updateImpactMetrics(2.5);
+      });
+    </script>
+  </body>
+</html>
