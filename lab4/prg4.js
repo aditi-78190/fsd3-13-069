@@ -10,6 +10,7 @@ app.get("/", (req, res) => {
     `);
 });
 
+// Get all products
 app.get("/api/products", (req, res) => {
 
     const modiProducts = products.map(
@@ -22,8 +23,17 @@ app.get("/api/products", (req, res) => {
     });
 });
 
+// Get product by ID
+app.get("/api/products/:id", (req, res) => {
+
+    const { id } = req.params;
+
+    res.send(`will show product ${id}`);
+});
+
+// 404 Route
 app.use((req, res) => {
-    res.status(404).send("Page Not Found");
+    res.status(404).send("Route Not Found");
 });
 
 app.listen(3333, () => {
